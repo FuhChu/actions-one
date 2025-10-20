@@ -13,13 +13,16 @@ jobs:
             ls -ltra
             cat README.md
         - name: Generate ASCII
-          run: cowsay -f dragon "Run for cover, I am a dragon...RAWR" >> dragon.txt
+          run: |
+            sudo apt install cowsay -y
+            cowsay -f dragon "Run for cover, I am a dragon...RAWR" >> dragon.txt
 
         # - name: List files
         #   run: ls
 
         # - name: Read files
         #   run: cat README.md
+
 
 
 
