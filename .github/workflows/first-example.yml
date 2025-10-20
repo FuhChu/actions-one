@@ -7,13 +7,19 @@ jobs:
         steps:
         - name: Checkout repo
           uses: actions/checkout@v4
-        - name: Welcome Message
-          run: echo "This is my first job running!"
+        - name: List and read files in multi-line execution
+          run: |
+            echo "This is my first job running!"
+            ls -ltra
+            cat README.md
+        - name: Generate ASCII
+          run: cowsay -f dragon "Run for cover, I am a dragon...RAWR" >> dragon.txt
 
-        - name: List files
-          run: ls
+        # - name: List files
+        #   run: ls
 
-        - name: Read files
-          run: cat README.md
+        # - name: Read files
+        #   run: cat README.md
+
 
 
