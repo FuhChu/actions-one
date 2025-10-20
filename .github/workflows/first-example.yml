@@ -16,12 +16,14 @@ jobs:
           run: |
             sudo apt install cowsay -y
             cowsay -f dragon "Run for cover, I am a dragon...RAWR" >> dragon.txt
+            cat dragon.txt
 
         # - name: List files
         #   run: ls
 
         # - name: Read files
         #   run: cat README.md
+
 
 
 
